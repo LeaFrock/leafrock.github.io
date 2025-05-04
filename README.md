@@ -1,5 +1,7 @@
 # LeaFrock Blogs
 
-[Hugo](https://github.com/gohugoio/hugo/releases)
+Thanks the following——
 
-[Congo](https://github.com/jpanther/congo/releases)
+* [Hugo](https://github.com/gohugoio/hugo/releases)
+* [Congo](https://github.com/jpanther/congo/releases)
+* [emojipedia](https://emojipedia.org/)
