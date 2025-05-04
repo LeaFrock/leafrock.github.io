@@ -5,7 +5,8 @@ lastmod: "2025-05-04"
 draft: false
 summary: "本文讨论了C#中静态字段初始化顺序的问题，这是一个容易被忽视但可能导致程序异常的陷阱。通过这篇文章，读者可以更好地理解静态字段初始化的规则，避免在实际开发中遇到类似的坑。"
 slug: "Just-So-Tricky-The-Initialization-Order-of-Static-Fields"
-tags: ["just-so-tricky"]
+tags: ["dotnet"]
+series: ["just-so-tricky"]
 ---
 
 “上古时代”，人们粗糙地将编程语言分为解释型语言和编译型语言，前者对代码的编写顺序有着较为严格的要求。但事实上随着编译器和JIT技术的发展，这样的分类早已过时。对C#这样的老牌编译型语言来说，不小心没写好代码顺序，也是会踩坑的！

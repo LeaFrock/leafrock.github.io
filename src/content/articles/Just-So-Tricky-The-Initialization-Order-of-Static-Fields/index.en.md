@@ -5,7 +5,8 @@ lastmod: "2025-05-04"
 draft: false
 summary: "This article discusses the issue of static field initialization order in C#, which is an easily overlooked pitfall that can lead to program exceptions. Through this article, readers can better understand the rules of static field initialization and avoid similar pitfalls in actual development."
 slug: "Just-So-Tricky-The-Initialization-Order-of-Static-Fields"
-tags: ["just-so-tricky"]
+tags: ["dotnet"]
+series: ["just-so-tricky"]
 ---
 
 In the "ancient times," programming languages were roughly divided into interpreted and compiled languages, with the former having stricter requirements for the order of code writing. However, with the development of compilers and JIT technology, such classifications have become outdated. For established compiled languages like C#, not writing the code order correctly can also lead to pitfalls!

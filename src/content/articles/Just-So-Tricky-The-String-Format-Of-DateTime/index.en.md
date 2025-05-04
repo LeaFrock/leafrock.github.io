@@ -5,7 +5,8 @@ lastmod: "2023-11-10"
 draft: false
 summary: "The article demonstrates through examples how neglecting regional settings can lead to unexpected date formats and explains the importance of the IFormatProvider parameter in the DateTime.ToString method. By reading this article, readers will learn how to correctly generate the expected date format strings, avoiding similar confusion and errors in the development process."
 slug: "Just-So-Tricky-The-String-Format-of-DateTime"
-tags: ["just-so-tricky"]
+tags: ["dotnet"]
+series: ["just-so-tricky"]
 ---
 
 If you are using Windows 10/11, first check the date format in the bottom right corner. Most people should be the same as me:

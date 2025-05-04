@@ -5,7 +5,8 @@ lastmod: "2023-11-10"
 draft: false
 summary: "文章通过实例演示了如何由于忽视区域设置而导致日期格式不符合预期的问题，并解释了DateTime.ToString方法中IFormatProvider参数的重要性。通过阅读本文，读者将学会如何正确地生成期望的日期格式字符串，避免在开发过程中遇到类似的困惑和错误。"
 slug: "Just-So-Tricky-The-String-Format-of-DateTime"
-tags: ["just-so-tricky"]
+tags: ["dotnet"]
+series: ["just-so-tricky"]
 ---
 
 如果读者您在用Win 10/11的话，先看看右下角的时间格式，大多数人应该和我一样：

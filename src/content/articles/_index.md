@@ -1,13 +1,6 @@
 ---
 title: "我的文章"
 description: "我撰写的文章。"
-
-cascade:
-  showDate: true
-  showDateUpdated: true
-  showAuthor: false
-  showSummary: true
-  invertPagination: true
 ---
 
 {{< lead >}}

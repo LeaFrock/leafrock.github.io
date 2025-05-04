@@ -9,14 +9,14 @@ copyright = "&copy; 2025 LeaFrock"
 [params]
   dateFormat = "2 January 2006"
 
-  mainSections = ["samples"]
-  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  mainSections = ["articles"]
+  description = "LeaFrock's articles."
 
 [params.author]
   name = "LeaFrock"
   image = "img/author.jpg"
-  headline = "Not your ordinary theme!"
-  bio = "This is an example author bio, and although there's a stock photo of a dog here, this article was actually created by a human. :dog:"
+  headline = ""
+  bio = ""
   links = [
     { zhihu = "https://www.zhihu.com/people/leafrock" },
   ]

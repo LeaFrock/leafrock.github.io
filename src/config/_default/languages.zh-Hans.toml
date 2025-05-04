@@ -9,14 +9,14 @@ copyright = "&copy; 2025 LeaFrock"
 [params]
   dateFormat = "2006年1月2日"
 
-  mainSections = ["samples"]
-  description = "一款基于Tailwindcss的强大且轻量的Hugo主题"
+  mainSections = ["articles"]
+  description = "LeaFrock的文章"
 
 [params.author]
   name = "LeaFrock"
   image = "img/author.jpg"
-  headline = "非凡的主题！"
-  bio = "这是一个作者简介示例，虽然这里有一张狗的库存照片，但实际上这篇文章是由人创建的。 :dog:"
+  headline = ""
+  bio = ""
   links = [
-    { linkedin = "https://linkedin.com/" },
+    { zhihu = "https://www.zhihu.com/people/leafrock" },
   ]

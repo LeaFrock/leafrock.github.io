@@ -1,13 +1,6 @@
 ---
 title: "My Articles"
 description: "My Articles."
-
-cascade:
-  showDate: true
-  showDateUpdated: true
-  showAuthor: false
-  showSummary: true
-  invertPagination: true
 ---
 
 {{< lead >}}
