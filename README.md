@@ -6,3 +6,4 @@ Thanks the following——
 * [Congo](https://github.com/jpanther/congo/releases)
 * [emojipedia](https://emojipedia.org/)
 * [favicon](https://favicon.io/)
+* [highlightjs](https://highlightjs.org/)
