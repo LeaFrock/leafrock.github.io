@@ -16,6 +16,11 @@
   weight = 10
 
 [[main]]
+  name = "诗词"
+  pageRef = "poetries"
+  weight = 20
+
+[[main]]
   name = "GitHub"
   url = "https://github.com/leafrock"
   weight = 40
