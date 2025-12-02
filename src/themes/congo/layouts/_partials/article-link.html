@@ -8,7 +8,7 @@
         href="{{ with $.Params.externalUrl }}
           {{ . }}
         {{ else }}
-          {{ $.RelPermalink }}
+          {{ $.Permalink }}
         {{ end }}"
         aria-label="{{ $.Title | emojify }}"
       >
@@ -16,12 +16,12 @@
           alt="{{ $.Params.featureAlt | default $.Params.thumbnailAlt | default "" }}"
           {{ if eq .MediaType.SubType "svg" }}
             class="w-24 max-w-[6rem] max-h-[4.5rem] rounded-md sm:max-h-[7.5rem] sm:w-40
-            sm:max-w-[10rem]" src="{{ .RelPermalink }}"
+            sm:max-w-[10rem]" src="{{ .Permalink }}"
           {{ else }}
             class="w-24 rounded-md sm:w-40" srcset="
-            {{- (.Fill "160x120 smart").RelPermalink }}
-            160w, {{- (.Fill "320x240 smart").RelPermalink }} 2x"
-            src="{{ (.Fill "160x120 smart").RelPermalink }}" width="160" height="120"
+            {{- (.Fill "160x120 smart").Permalink }}
+            160w, {{- (.Fill "320x240 smart").Permalink }} 2x"
+            src="{{ (.Fill "160x120 smart").Permalink }}" width="160" height="120"
           {{ end }}
           {{ if $.Site.Params.enableImageLazyLoading | default true }}
             loading="lazy"
@@ -52,7 +52,7 @@
       {{ else }}
         <a
           class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="{{ .RelPermalink }}"
+          href="{{ .Permalink }}"
           >{{ .Title | emojify }}</a
         >
       {{ end }}
@@ -61,7 +61,7 @@
           {{ partial "badge.html" (i18n "article.draft" | emojify) }}
         </div>
       {{ end }}
-      {{ if templates.Exists "partials/extend-article-link.html" }}
+      {{ if templates.Exists "_partials/extend-article-link.html" }}
         {{ partial "extend-article-link.html" . }}
       {{ end }}
     </h3>

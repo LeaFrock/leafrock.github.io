@@ -8,7 +8,7 @@
     "section" ($section.Title | emojify | safeJS)
     "summary" (.Summary | emojify | safeJS)
     "content" (.Plain | emojify | safeJS)
-    "permalink" .RelPermalink
+    "permalink" .Permalink
     )
   -}}
 {{- end -}}

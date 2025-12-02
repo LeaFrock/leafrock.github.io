@@ -14,7 +14,8 @@
     {{ $authorImage := resources.Get . }}
     {{ if $authorImage }}
       {{ $imgClass := "mb-2 h-auto w-36 rounded-full" }}
-      {{ partial "picture.html" (dict "img" $authorImage "alt" $altText "class" $imgClass "lazy" $lazy) }}
+      {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+      {{ partial "picture.html" (dict "img" $authorImage "alt" $altText "class" $imgClass "lazy" $lazy "webp" $webp) }}
     {{ end }}
   {{ end }}
   <h1 class="text-4xl font-extrabold">

@@ -1,13 +1,14 @@
+{{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
 {{/* Mermaid */}}
 {{ if .Page.HasShortcode "mermaid" }}
   {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
   {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
   {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
-  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512" }}
+  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint $algorithm }}
   <script
     defer
     type="text/javascript"
-    src="{{ $mermaidJS.RelPermalink }}"
+    src="{{ $mermaidJS.Permalink }}"
     integrity="{{ $mermaidJS.Data.Integrity }}"
   ></script>
 {{ end }}
@@ -16,36 +17,32 @@
   {{ $chartLib := resources.Get "lib/chart/chart.umd.js" }}
   {{ $chartConfig := resources.Get "js/chart.js" }}
   {{ $chartConfig := $chartConfig | resources.Minify }}
-  {{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint "sha512" }}
+  {{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint $algorithm }}
   <script
     defer
     type="text/javascript"
-    src="{{ $chartJS.RelPermalink }}"
+    src="{{ $chartJS.Permalink }}"
     integrity="{{ $chartJS.Data.Integrity }}"
   ></script>
 {{ end }}
 {{/* Katex */}}
 {{ if .Page.HasShortcode "katex" }}
   {{ $katexCSS := resources.Get "lib/katex/katex.min.css" }}
-  {{ $katexCSS := $katexCSS | resources.Fingerprint "sha512" }}
+  {{ $katexCSS := $katexCSS | resources.Fingerprint $algorithm }}
   <link
     type="text/css"
     rel="stylesheet"
-    href="{{ $katexCSS.RelPermalink }}"
+    href="{{ $katexCSS.Permalink }}"
     integrity="{{ $katexCSS.Data.Integrity }}"
   />
   {{ $katexJS := resources.Get "lib/katex/katex.min.js" }}
-  {{ $katexJS := $katexJS | resources.Fingerprint "sha512" }}
-  <script
-    defer
-    src="{{ $katexJS.RelPermalink }}"
-    integrity="{{ $katexJS.Data.Integrity }}"
-  ></script>
+  {{ $katexJS := $katexJS | resources.Fingerprint $algorithm }}
+  <script defer src="{{ $katexJS.Permalink }}" integrity="{{ $katexJS.Data.Integrity }}"></script>
   {{ $katexRenderJS := resources.Get "lib/katex/auto-render.min.js" }}
-  {{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
+  {{ $katexRenderJS := $katexRenderJS | resources.Fingerprint $algorithm }}
   <script
     defer
-    src="{{ $katexRenderJS.RelPermalink }}"
+    src="{{ $katexRenderJS.Permalink }}"
     integrity="{{ $katexRenderJS.Data.Integrity }}"
     onload="renderMathInElement(document.body);"
   ></script>
