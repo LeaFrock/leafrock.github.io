@@ -6,6 +6,49 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.14.0] - 2026-05-23
+
+### Added
+
+- Hindi and Gujarati translations ([#1093](https://github.com/jpanther/congo/pull/1093))
+- Alternate languages are now declared on translated pages ([#1151](https://github.com/jpanther/congo/pull/1151))
+
+### Changed
+
+- ⚠️ Required Hugo version is now 0.158.0 or later
+- Upgrade to KaTeX v0.16.28 ([#1140](https://github.com/jpanther/congo/pull/1140))
+- Upgrade to Mermaid v11.15.0 ([#1148](https://github.com/jpanther/congo/pull/1148), [#1167](https://github.com/jpanther/congo/pull/1167))
+- Upgrade to KaTeX v0.17.0 ([#1159](https://github.com/jpanther/congo/pull/1159))
+
+### Fixed
+
+- Taxonomies are not rendered when they are the only article meta option enabled ([#1158](https://github.com/jpanther/congo/issues/1158))
+- Pagination would fail when pagination width is a float value ([#1161](https://github.com/jpanther/congo/issues/1161))
+- Warnings related to deprecated Language parameters ([#1162](https://github.com/jpanther/congo/pull/1162))
+- Author warning preventing sites from building ([#1165](https://github.com/jpanther/congo/pull/1165))
+
+## [2.13.0] - 2026-01-20
+
+### Added
+
+- New `script` parameter for Umami Analytics to allow self-hosted deployments ([#1103](https://github.com/jpanther/congo/pull/1103))
+
+### Changed
+
+- Upgrade to Mermaid v11.12.2 ([#1087](https://github.com/jpanther/congo/pull/1087), [#1123](https://github.com/jpanther/congo/pull/1123))
+- Upgrade to ChartJS v4.5.1 ([#1131](https://github.com/jpanther/congo/pull/1131))
+- Upgrade to Tailwind v3.4.19 ([#1132](https://github.com/jpanther/congo/pull/1132))
+- Upgrade to Typography v0.5.19 ([#1133](https://github.com/jpanther/congo/pull/1133))
+- Upgrade to KaTeX v0.16.27 ([#1136](https://github.com/jpanther/congo/pull/1136))
+
+### Fixed
+
+- Code copy button not working when `noClasses` is set to `true` ([#1091](https://github.com/jpanther/congo/pull/1091))
+- `rel` parameter not added to links when specified in menu configuration ([#1116](https://github.com/jpanther/congo/pull/1116))
+- Certain KaTeX mathematical expressions not being parsed correctly in Markdown ([#1121](https://github.com/jpanther/congo/issues/1121))
+- References to `_internal` templates that no longer apply in the new Hugo templating system ([#1124](https://github.com/jpanther/congo/issues/1124))
+- Deprecated references to `_build` front matter key in Hugo v0.145.0 or later
+
 ## [2.12.2] - 2025-07-13
 
 ### Added
@@ -21,7 +64,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- `figure` shortcode would load recursively when using the `default` paramater ([#1074](https://github.com/jpanther/congo/issues/1074))
+- `figure` shortcode would load recursively when using the `default` parameter ([#1074](https://github.com/jpanther/congo/issues/1074))
 - Some partials not loading due to incorrect file paths ([#1075](https://github.com/jpanther/congo/pull/1075))
 
 ## [2.12.0] - 2025-06-22
@@ -997,7 +1040,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.12.2...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.14.0...HEAD
+[2.14.0]: https://github.com/jpanther/congo/compare/v2.13.0...v2.14.0
+[2.13.0]: https://github.com/jpanther/congo/compare/v2.12.2...v2.13.0
 [2.12.2]: https://github.com/jpanther/congo/compare/v2.12.1...v2.12.2
 [2.12.1]: https://github.com/jpanther/congo/compare/v2.12.0...v2.12.1
 [2.12.0]: https://github.com/jpanther/congo/compare/v2.11.0...v2.12.0
